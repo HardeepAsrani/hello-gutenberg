@@ -15,6 +15,9 @@
 //  Exit if accessed directly.
 defined('ABSPATH') || exit;
 
+// Load Sidebar Functions
+require_once( plugin_dir_path( __FILE__ ) . 'sidebar.php' );
+
 /**
  * Enqueue front end and editor JavaScript and CSS
  */
