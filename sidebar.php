@@ -4,9 +4,18 @@
  * Register Hello Gutenbert Meta Box
  */
 function hello_gutenberg_add_meta_box() {
-	add_meta_box( 'hello_gutenberg_meta_box', __( 'Hello Gutenberg Meta Box', 'hello-gutenberg' ), 'hello_gutenberg_metabox_callback', 'post',  array(
-        '__back_compat_meta_box' => false,
-    ) );
+	add_meta_box( 
+		'hello_gutenberg_meta_box', 
+		__( 'Hello Gutenberg Meta Box', 'hello-gutenberg' ), 
+		'hello_gutenberg_metabox_callback',
+		null,
+		'side',
+		'low',
+		'post',
+		array(
+			'__back_compat_meta_box' => false,
+		)
+	);
 }
 add_action( 'add_meta_boxes', 'hello_gutenberg_add_meta_box' );
 
